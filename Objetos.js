@@ -21,8 +21,16 @@ var john = {
     family: ['Jane', 'Mark', 'Bob', 'Emily'],
     job: 'teacher',
     isMarried: false,
-    calcEdad: function(añoNacim){
+   /* calcEdad: function(añoNacim){
         return 2020 - añoNacim;
+    }*/
+    /*calcEdad: function(){
+        var añoAct = (new Date).getFullYear();
+        return añoAct - this.añoNacim; //this significa el objeto actual. 
+    }*/
+    calcEdad: function(){
+        var añoAct = (new Date).getFullYear();
+        this.año = añoAct - this.añoNacim; //this significa el objeto actual. 
     }
 };
 
@@ -47,6 +55,13 @@ console.log(jane);
 //Podemos incluso adjuntar funciones a los objetos, llamadas metodos.
 //para lo cual tomemos el objeto john y agreguemosle una funcion para calcular la edad de john,
 //no queremos almacenar el resultado dentro del objeto porqeu cambia cada año
-console.log(john.calcEdad(1990));
+//console.log(john.calcEdad(1990)); En vez de estar pasando por parametro el año, podemos estar utilizando el valor que ya tenemos dentro del objeto.
 
 //Ahora podemos decir que los arrays son objetos porque esa es la unica forma de tener metodos 
+
+//Falta algo más ¿Que pasa si ademas quiero almacenar el resultado en el objeto john?
+//var age = john.calcEdad();
+//Pero incluso lo podemos hacer mejor. Entonces si se puede acceder a una propiedad del objeto actual, esto significa que tambien podemos configurarlo.
+
+john.calcEdad();
+console.log(john);
