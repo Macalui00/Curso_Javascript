@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Section 3:How javascript works behind the scenes</title>
+    </head>
+    <style>
+
+        body {
+            background-color:  rgb(61, 56, 56);
+        }
+
+        h1{ text-align: center;
+        text-decoration: underline;
+        font-family: Arial, Helvetica, sans-serif;
+        color: grey;
+        }
+
+        h2{
+        text-decoration: underline;
+        font-family: Arial, Helvetica, sans-serif;
+        color: grey;
+        }
+
+        #menu {
+            text-align: center;
+        }
+
+        /* Menu */
+        #menu ul {
+        display:inline-block; /*Esto me permite junto al text-align: center, que el menu me quede centrado*/
+        list-style:none;
+        margin:0 auto;
+        padding:0;
+        }
+
+        /* items del menu */
+
+        #menu ul li {
+        background-color:#6e7174;
+        }
+
+        /* enlaces del menu */
+
+        #menu ul a {
+        display:block;
+        color: white;
+        text-decoration:none;
+        font-weight:400;
+        font-size:15px;
+        padding:10px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform:uppercase;
+        letter-spacing:1px;
+        }
+
+        /* items del menu */
+
+        #menu ul li {
+        position:relative;
+        float:left;
+        margin:0 auto;
+        padding:0;
+        }
+
+        /* efecto al pasar el ratón por los items del menu */
+
+        #menu ul li:hover {
+        background:#343a42;
+        }
+        /* menu desplegable */
+
+        #menu ul ul {
+        display:none;
+        position:absolute;
+        top:100%;
+        left:0;
+        background: grey;
+        padding:0;
+        }
+
+        /* items del menu desplegable */
+
+        #menu ul ul li {
+        float:none;
+        width:150px
+        }
+
+        /* enlaces de los items del menu desplegable */
+
+        #menu ul ul a {
+        line-height:120%;
+        padding:10px 15px;
+        }
+
+        /* items del menu desplegable al pasar el ratón */
+
+        #menu ul li:hover > ul {
+        display:block;
+        }
+
+        p{
+            color: grey;
+            font-size: 20px;
+            font-family: Arial;
+        }
+    </style>
+
+    <body>
+        <h1>Section 3: How javascript works behind the scenes</h1>
+
+        <h2>Breve Resumen</h2>
+        <p> Esta seccion fue un poco mas teórica donde se explica como Javascript funciona por detrás. <br>
+            Por eso, no encontrarás tanto en esta seccion a comparación de otras.<br>
+            Aún así podes pasar y mirar un poco de lo que anote.<br>
+            Saludos!
+        </p>
+
+        <h1>Menu</h1>
+        <nav id = "menu">
+            <ul>
+                <li><a href="index.html">volver a inicio</a></li>
+                <li><a href="seccion3Curso.html">Seccion 3</a>
+                    <ul>
+                        <li><a href="Hoisting.html" title="Hoisting">Hoisting in practice</a></li>
+                        <li><a href="Scoping.html" title="Scoping">Scoping</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </body>
+    
+</html>

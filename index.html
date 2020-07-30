@@ -4,16 +4,99 @@
         <meta charset="UTF-8">
         <title>Curso JavaScript - mis anotaciones</title>
     </head>
-    
+
+    <style>
+        h1{color: grey; text-decoration: underline;text-align: center; font-family: Arial;}
+        #nav{
+            text-align: center;
+        }
+        #menu {
+            padding: 0;
+            display:inline-block; 
+        }
+
+        #menu li {
+            display: inline;
+        }
+        
+        #menu li a {
+            font-family: Arial;
+            font-size: 20px;
+            text-decoration: none;
+            float: left;
+            /* border: 2px solid #7C7C7C;*/
+            border-top: solid;
+            border-bottom: solid;
+            padding: 10px;
+            color: grey;
+         }
+        #menu li a:hover {
+            background-color: #bdc0c4;
+        }
+
+        body{
+            background-color: rgb(61, 56, 56);
+        }
+        
+        p{
+            color: grey;
+            font-size: 20px;
+            font-family: Arial;
+        }
+
+        #p2 {
+            text-align: center;
+        }
+
+        #p1 a {
+            text-decoration: none;
+        }
+        #p1 a:link {
+        color: #59c203;
+        }
+
+        #p1 a:visited {
+        color: rgb(116, 223, 29);
+        }
+
+        #p1 a:focus {
+        border-bottom: 1px solid;
+        background: #BAE498;
+        }
+
+        #p1 a:hover {
+        border-bottom: 1px solid;     
+        background: #CDFEAA;
+        }
+        
+    </style>  
+
     <body id = 'cuerpo'>
         <h1>Secciones del curso de Javascript de Udemy</h1>
+
+        <p id = "p1">
+            Bienvenido a mis prácticas de Javascript del curso realizado en UDEMY. <br>
+            Si te interesa saber más sobre el curso podes hacer
+            <a href="https://eylearning.udemy.com/course/the-complete-javascript-course" title="Curso Udemy">click aquí</a>,
+            sino puedes indagar más yendo a las diferentes secciones de esta página y ver mis anotaciones.
+        </p>
+
+        <h1> Las secciones del curso son las siguientes </h1>
+        <nav id = "nav">
+            <ul id="menu">
+                <li><a href="seccion2Curso.html" title="Sec2">Sección 2</a></li>
+                <li><a href="seccion3Curso.html" title="Sec3">Sección 3</a></li>
+                <li><a href="seccion4Curso.html" title="Sec4">Sección 4</a></li>
+                <li><a href="seccion5Curso.html" title="Sec5">Sección 5</a></li>
+            </ul>
+        </nav>
+
+        <p id = "p2">
+            Gracias por todo, espero que te diviertas!
+        </p>
+
     </body>
 
-	<ul>
-        <li><a href="seccion2Curso.html" title="Sec2">Sección 2</a></li>
-        <li><a href="seccion3Curso.html" title="Sec3">Sección 3</a></li>
-        <li><a href="seccion4Curso.html" title="Sec4">Sección 4</a></li>
-        <li><a href="seccion5Curso.html" title="Sec5">Sección 5</a></li>
-	</ul>
+
 
 </html>
