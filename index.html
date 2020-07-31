@@ -68,33 +68,70 @@
         border-bottom: 1px solid;     
         background: #CDFEAA;
         }
+
+        #wrapper {
+            width: 1000px;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: none;
+            box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            padding: 10px;
+        }
+
+        #divmen {
+            width: 1000px;
+            background-color:none;
+           /* box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);*/
+            border: solid grey;
+            overflow: hidden;
+            padding: 0px;
+        }
+
+
+/*
+        #prueba{
+            width: 1000px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: none;
+            box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+*/
         
     </style>  
 
     <body id = 'cuerpo'>
         <h1>Secciones del curso de Javascript de Udemy</h1>
-
+        <div id = 'wrapper'>
         <p id = "p1">
             Bienvenido a mis prácticas de Javascript del curso realizado en UDEMY. <br>
             Si te interesa saber más sobre el curso podes hacer
             <a href="https://eylearning.udemy.com/course/the-complete-javascript-course" title="Curso Udemy">click aquí</a>,
             sino puedes indagar más yendo a las diferentes secciones de esta página y ver mis anotaciones.
         </p>
-
+        
+        <div id = 'prueba'>
         <h1> Las secciones del curso son las siguientes </h1>
-        <nav id = "nav">
-            <ul id="menu">
-                <li><a href="seccion2Curso.html" title="Sec2">Sección 2</a></li>
-                <li><a href="seccion3Curso.html" title="Sec3">Sección 3</a></li>
-                <li><a href="seccion4Curso.html" title="Sec4">Sección 4</a></li>
-                <li><a href="seccion5Curso.html" title="Sec5">Sección 5</a></li>
-            </ul>
-        </nav>
-
+        
+            <nav id = "nav">
+                <ul id="menu">
+                    <li><a href="seccion2Curso.html" title="Sec2">Sección 2</a></li>
+                    <li><a href="seccion3Curso.html" title="Sec3">Sección 3</a></li>
+                    <li><a href="seccion 4\seccion4Curso.html" title="Sec4">Sección 4: Juego en Javascript</a></li>
+                    <li><a href="seccion5Curso.html" title="Sec5">Sección 5</a></li>
+                </ul>
+            </nav>
+        
         <p id = "p2">
             Gracias por todo, espero que te diviertas!
         </p>
-
+        </div>
     </body>
 
 
