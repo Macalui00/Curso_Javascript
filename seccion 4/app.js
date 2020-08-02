@@ -131,7 +131,15 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
    diceDOM.src = 'dice-'+ dice + '.png';
 
    /* 3. actualizar el round score solamente si el numero rolleado no es un 1 */
-    
+    if (dice > 1){
+        //agregar puntaje
+        roundScore += dice; //primero actualizamos el puntaje de la jugada 
+        document.querySelector('#current-' + activePlayer).textContent = roundScore; //y luego mostramos el puntaje de la jugada por pantalla
+    } else {
+        //sigue el otro jugador
+        //operador ternario:
+        activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+    }
 });
 //FUNCION ANONIMA que no tiene nombre y por eso no podemos usar afuera de este contexto.
 //Como esta funcion no la queremos usar en otro lado ademas de este caso particular, es ideal que la definamos de esta manera.
