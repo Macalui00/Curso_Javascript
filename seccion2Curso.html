@@ -9,19 +9,24 @@
     <style>
 
         body {
-            background-color:  rgb(61, 56, 56);
+            /*background-color:  rgb(61, 56, 56);*/
+            background-image: url('bush.png');
         }
 
         h1{ text-align: center;
         text-decoration: underline;
         font-family: Arial, Helvetica, sans-serif;
-        color: grey;
+        color:  rgb(133, 131, 131);
         }
 
         h2{
         text-decoration: underline;
         font-family: Arial, Helvetica, sans-serif;
-        color: grey;
+        color:  rgb(218, 218, 218);
+        }
+        #parte1{
+            position: relative;
+            z-index: 999;
         }
 
         #menu {
@@ -85,13 +90,14 @@
 
         #menu ul ul li {
         float:none;
-        width:150px
+        width:200px
         }
 
         /* enlaces de los items del menu desplegable */
 
         #menu ul ul a {
-        line-height:120%;
+
+        line-height:90%;
         padding:10px 15px;
         }
 
@@ -102,16 +108,45 @@
         }
 
         p{
-            color: grey;
+            color:  rgb(218, 218, 218);
             font-size: 20px;
             font-family: Arial;
         }
 
+        #central {
+            width: 800px;
+            position: absolute;
+            top: 93%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(89, 89, 90, 0.575);
+            box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            padding: 10px;
+
+        }
+        #imagenes{
+            position: relative;
+            left: 11%;
+            z-index: 3;
+        }
+
+        #marco1,#marco2 {
+        padding:8px;
+        background-color: #4b4b4b;
+        width: 600px;
+        border: 1px solid #f1f1f1;
+        }
+        #marco1 IMG, #marco2 IMG{
+        border: 1px solid #f1f1f1;
+        }
     </style>
 
     <body>
         <h1>Section 2: JavaScript Language Basics</h1>
 
+        <div id ='central'>
+        <div id= 'parte1'>
         <nav id = "menu">
             <ul>
                 <li><a href="index.html" title="Lecciones">Volver a inicio</a></li>
@@ -144,17 +179,27 @@
                     </ul>
                 </li>      
             </ul>
-        </nav>
+        </nav>            
+        </div>
 
-        <h2>Breve Resumen</h2>
         
-        <p> Esta seccion consistió en aprender las bases de Javascript. <br>
-            Mi recomendación, para apreciar mejor lo que fui haciendo es click derecho a la pantalla,
-            inspeccionar, para poder ver la consola.<br>
-            Saludos!
-        </p>
-
-
+            <h2>Breve Resumen</h2>
+            
+            <p> Esta seccion consistió en aprender las bases de Javascript. <br>
+                Mi recomendación, para apreciar mejor lo que fui haciendo es click derecho a la pantalla,
+                inspeccionar, para poder ver la consola.<br>
+                Saludos!
+            </p>
+            <div id = 'imagenes'>
+                <div id = 'marco1'>
+                    <img src="inspeccionar.png" width="600" height="400" alt="Inspeccionar"/>  
+                </div>
+                <br>
+                <div id = 'marco2'>
+                    <img src="consola.png" width="600" height="600" alt="Consola" />     
+                </div>    
+            </div>
+        </div>
 
     </body>
 

@@ -17,7 +17,7 @@ Y probablemente la cosa más importante de todo es el puntaje de cada jugador.
 */
 //var score1, scored2 = 0;
 
-var scores, roundScore, activePlayer, dice;
+var scores, roundScore, activePlayer;
 scores = [0,0];
 roundScore = 0;
 activePlayer = 0; //0 el primer jugador, 1 el segundo jugador.
@@ -41,9 +41,9 @@ Math.floor(Math.random()*6), me retornará un numero random entre 0 y 5 sin deci
 El tema es que nosotros queremos numeros random entre 1 y 6, entonces lo que tenemos que hacer es simplemente sumarle 1.
 Math.floor(Math.random()*6)+1
 */
-
+/*
 dice = Math.floor(Math.random()*6)+1;
-console.log(dice);
+console.log(dice);*/
 
 /*Esto fue la primera cosa, la segunda cosa a hacer es el DOM manipulation. 
 El objeto que nos da acceso al DOM es el objeto documento
@@ -61,7 +61,7 @@ Ejemplo, supongamos que quiero seleccionar el string que dice el puntaje actual 
 */
 
 //hasta el querySelector, hemos seleccionado el elemento, ahora si queremos cambiar el texto, necesitamos otro metodo que es: textContent
-document.querySelector('#current-' + activePlayer).textContent = dice;
+//document.querySelector('#current-' + activePlayer).textContent = dice;
                         // current- 1/0
 
 /*Hay dos maneras de cambiar el contenido del elemento seleccionado, una es el textContent, el cual 
@@ -79,9 +79,9 @@ Entonces veamos como podria funcionar:
 
 Supongamos que queremos leer algo de nuestra pagina web y almacenarlo en una variable:
 */
-
+/*
 var x = document.querySelector('#score-0').textContent; // en este caso no es igual a nada porque solo queremos que lea el texto.
-console.log(x);
+console.log(x);*/
 //Entonces funciona para setear y para leer, el primero con el = es el setter y el segndo es un getter, porqeu obtenemos el valor
 
 //Otra cosa que queremos hacer es esconder el dado al principio cuando abrimos el juego.
@@ -104,9 +104,40 @@ Entonces el Oyente de Evento es simplemente una funcion que realiza una accion b
 //Ahora vallamos a codear lo que corresponde al boton roll the dice:
 //El addEventListener tiene dos argumentos, el 1ero es el tipo de evento que en este caso es simplemente hacer click
 //El segundo elemento es la funcion que será llamada tan pronto como ese evento suceda.
-
+/*
 function btn(){
-    
+    //hace algo aca
 }
+btn();
 
 document.querySelector('.btn-roll').addEventListener('click', btn);
+*/
+
+document.getElementsById('score-0').textContent = '0';
+document.getElementsById('score-1').textContent = '0';
+document.getElementsById('current-0').textContent = '0';
+document.getElementsById('current-1').textContent = '0';
+
+/* Pero tambien puedo hacer lo siguiente: */
+document.querySelector('.btn-roll').addEventListener('click', function(){
+    //¿Que sucedera entonces ni bien cliqueen el boton:
+    /* 1. el numero random, por lo que tomaremos la funcion que estaba arriba
+    */
+   var dice = Math.floor(Math.random()*6)+1;
+
+   /* 2. Mostrar el resultado:  lo primero que tenemos que hacer es que vuelva a aparecer el dado ya que lo habiamos ocultado*/
+   var diceDOM = document.querySelector('.dice');
+   diceDOM.style.display = 'block';
+   diceDOM.src = 'dice-'+ dice + '.png';
+
+   /* 3. actualizar el round score solamente si el numero rolleado no es un 1 */
+    
+});
+//FUNCION ANONIMA que no tiene nombre y por eso no podemos usar afuera de este contexto.
+//Como esta funcion no la queremos usar en otro lado ademas de este caso particular, es ideal que la definamos de esta manera.
+
+/*-------------------------------------------------------------------------------------------------------------------------------------- 
+Leccion 3: Updating scores and changing th actibe player
+
+En esta leccion podremos descubrir que es el operador ternario y aprenderemos como agregar, eliminar o alterar html clases.
+*/

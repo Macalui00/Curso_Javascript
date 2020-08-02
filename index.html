@@ -6,7 +6,7 @@
     </head>
 
     <style>
-        h1{color: grey; text-decoration: underline;text-align: center; font-family: Arial;}
+        h1,h2{color: rgb(218, 218, 218); /*text-decoration: underline;*/text-align: center; font-family: helvetica;}
         #nav{
             text-align: center;
         }
@@ -20,30 +20,34 @@
         }
         
         #menu li a {
-            font-family: Arial;
-            font-size: 20px;
+            font-family: Helvetica;
+            font-size: 15px;
             text-decoration: none;
+            text-transform:uppercase;
             float: left;
             /* border: 2px solid #7C7C7C;*/
-            border-top: solid;
-            border-bottom: solid;
+            border-top: 1px solid;
+            border-bottom:1px solid;
             padding: 10px;
-            color: grey;
+            color:rgb(218, 218, 218);
          }
         #menu li a:hover {
-            background-color: #bdc0c4;
+            /*
+            background-color: #bdc0c4;*/
+            background-color: #59c203;
         }
         #derechos, #Redes{
-            color: grey;
+            color: rgb(218, 218, 218);
         }
         body{
-            background-color: rgb(61, 56, 56);
+            /*background-color: rgb(61, 56, 56);*/
+            background-image: url('oriental-tiles.png');
         }
         
         p{
-            color: grey;
+            color: rgb(218, 218, 218);
             font-size: 20px;
-            font-family: Arial;
+            font-family: helvetica;
         }
 
         #p2 {
@@ -70,28 +74,28 @@
         border-bottom: 1px solid;     
         background: #CDFEAA;
         }
-
-        #wrapper {
+        
+        #contenido {
             width: 1000px;
             position: absolute;
             top: 35%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: none;
+            background-color: rgba(89, 89, 90, 0.575);
             box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
             overflow: hidden;
             padding: 10px;
         }
 
-        #divmen {
+       /* #divmen {
             width: 1000px;
             background-color:none;
-           /* box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);*/
+           /* box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
             border: solid grey;
             overflow: hidden;
             padding: 0px;
         }
-
+        */
 /*
         #prueba{
             width: 1000px;
@@ -110,7 +114,7 @@
     <body id = 'cuerpo'>
         <h1>Secciones del curso de Javascript de Udemy</h1>
 
-        <div id = 'wrapper'>
+        <div id = 'contenido'>
         <p id = "p1">
             Bienvenido a mis prácticas de Javascript del curso realizado en UDEMY. <br>
             Si te interesa saber más sobre el curso podes hacer
@@ -119,8 +123,7 @@
         </p>
         
         <div id = 'prueba'>
-        <h1> Las secciones del curso son las siguientes </h1>
-        
+        <h2> Las secciones del curso son las siguientes </h2>
             <nav id = "nav">
                 <ul id="menu">
                     <li><a href="seccion2Curso.html" title="Sec2">Sección 2</a></li>
