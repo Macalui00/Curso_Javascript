@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"&amp;gt;>
+
+        <title>Como nuestro código es ejecutado</title>
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+    </head>
+    
+    <style>
+        body{background-color: rgb(226, 226, 231);}
+        h1, h2 {color: #adadad; font-family:"Open Sans", sans-serif;text-decoration: none; text-transform: uppercase;}
+        h1{text-align: center;}
+        
+        body{
+            background-color: rgb(61, 56, 56);
+        }
+
+        #central{
+            width: 1000px;
+            position: absolute;
+            top: 45%;
+            left: 55%;
+            transform: translate(-50%, -50%);
+            display: block;
+
+        }
+
+        a {
+            width: 47px;
+            display:block;
+            color: white;
+            text-decoration:none;
+            font-weight:400;
+            font-size:15px;
+            padding:10px;
+            font-family:"Open Sans", sans-serif;
+            text-transform:uppercase;
+            letter-spacing:1px;
+            background-color:#6e7174;
+            position: absolute;
+            top: 90%;
+            left: 50%;
+        }
+
+    </style>
+
+    <body>
+        <h1>Section 3: Como nuestro código es ejecutado:</h1>
+        <h1>Javascript Parsers and Engine</h1>
+        <div id = 'central'>
+            <p>
+                Esta es la primera lección teórica donde veremos muy rápidamente cómo se ejecutan realmente los códigos en Javascript
+                que escribimos.
+                
+                Javascript siempre se aloja en algun entorno, ejemplos de estos entornos son:
+                    - Google Chrome
+                    - Firefox
+                    - Safari
+                    - etc.
+                Allí es donde se ejecuta Javascript.
+                
+                Tambien pueden existir otros Hosts como pueden ser:
+                    - El servidor web NoJs
+                O, incluso, algunas aplicaciones que aceptan la entrada de código Javascript.
+
+                Sin embargo, siempre nos centraremos solo en los navegadores de este curso.
+
+                Entonces, cuando escribimos nuestro código Javascript y realmente queremos ejecutarlo, hay muchas cosas sucediendo detrás
+                de escena. Lo que sucede es que el host donde se aloja Javascript, tien algun tipo de motor de javascript que toma nuestro
+                códio y lo ejecuta.
+
+                Entonces, en terminos muy simples un motor de Javascript es un programa que ejecuta código Javascript.
+                Hay muchos motores diferentes, como el motor V8 de Google, que se usa en Google Chrome. Pero, hay muchos otros.
+                Como sabemos SpiderMonkey, nucleo de Javascript y muchos más. 
+                
+                Ahora, lo primero que sucede dentro del motor, es que nuestro código es analizado por un analizador sintáctico, que,
+                basicamente lee nuestro código linea por linea y verifica si la sintaxis del codigo que le dimos es correcta. Esto significa,
+                que el analizador conoce las reglas de Javascript y como debe escribirse para que sea correcto y valido. Y si cometes algunos
+                errores, basicamente arroja un error y detiene la ejecución. Sin embargo, si todo es correcto, el analizador genera una
+                estructura de datos conocida como Árbol de sintaxis abstracta, que luego se traduce en código máquina.
+
+                Entonces, este código ya no es código Javascript, sino un codigo, o digamos un conjunto de instrucciones, que puede ser ejecutado
+                directamente por el procesador de la computadora. Y, es solo cuando nuestro código ya se convirtió en un código de máquina que,
+                realmente se ejecuta y hace su trabajo.
+
+                Entonces, no es realmente importante que realmente memorices todo esto. Solo que entiendas la idea basica de loq ue realmente
+                sucede una vez que elegimos ejecutar nuestro código. Y, de hecho, hay mucho mas detras de escena. Y diferentes motores hacen las
+                cosas ligeramente diferente. Pero, esto es absolutamente suficiente para entender el punto. 
+                </s>
+            </p>
+       
+        </div>
+    </body>
+    <a href="../Index.html">HOME</a>
+</html>

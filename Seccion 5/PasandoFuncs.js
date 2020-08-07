@@ -29,3 +29,25 @@ function arrayCalc(arr, fn){
 function calcularEdad(el){
     return 2016-el;
 }
+
+function esMayorDeEdad(el){
+    return el >= 18;
+}
+
+function  maxRitmoCardiaco(el){
+    if (el >= 18 && el <= 81){
+       return Math.round(206.9 - (0.67 * el)); //redondear el numero al entero mas cercano 
+    } else {
+        return -1;
+    }
+    
+}
+//No le ponemos los parentesis ahora a calcularEdad porque no queremos llamar ahora a la funcion, sino mas tarde.
+var edades =  arrayCalc(años,calcularEdad);
+var mayoriasDeEdades = arrayCalc(edades, esMayorDeEdad);
+var ritmos = arrayCalc(edades, maxRitmoCardiaco);
+
+console.log(edades);
+console.log(mayoriasDeEdades);
+console.log(ritmos);
+

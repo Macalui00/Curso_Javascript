@@ -115,10 +115,10 @@ btn();
 document.querySelector('.btn-roll').addEventListener('click', btn);
 */
 
-    document.getElementsById('score-0').textContent = '0';
-    document.getElementsById('score-1').textContent = '0';
-    document.getElementsById('current-0').textContent = '0';
-    document.getElementsById('current-1').textContent = '0';
+    document.getElementById('score-0').textContent = '0';
+    document.getElementById('score-1').textContent = '0';
+    document.getElementById('current-0').textContent = '0';
+    document.getElementById('current-1').textContent = '0';
 
 /* Pero tambien puedo hacer lo siguiente: */
 document.querySelector('.btn-roll').addEventListener('click', function(){
@@ -192,7 +192,6 @@ document.querySelector('btn-hold').addEventListener('click',function(){
             nextPlayer();
         }  
     }
-
 });
 
 
@@ -203,8 +202,8 @@ function nextPlayer(){
  roundScore = 0; //se reseteea su contador a cero.
 
  //Hay que mostrar tambien que su contador se puso en cero en la interfaz de usuario.
- document.getElementsById('current_0').textContent = '0';
- document.getElementsById('current_1').textContent = '0';
+ document.getElementById('current_0').textContent = '0';
+ document.getElementById('current_1').textContent = '0';
 
  //Ahora lo que queremos hacer es cambiar lo que se ve en la intefaz, donde aparece el punto rojo y que el cuadro gris ahora tiene que ser el otro jugador.
  //document.querySelector('.player-0-panel').classList.remove('active'); //Seleccionamos con el Query selector la clase, y luego removemos de la lista de clases el active.
@@ -237,12 +236,12 @@ function init(){
 
     document.querySelector('.dice').style.display = 'none';
 
-    document.getElementsById('score-0').textContent = '0';
-    document.getElementsById('score-1').textContent = '0';
-    document.getElementsById('current-0').textContent = '0';
-    document.getElementsById('current-1').textContent = '0';
-    document.getElementsById('name-0').textContent = 'Player 1';
-    document.getElementsById('name-1').textContent = 'Player 2';
+    document.getElementById('score-0').textContent = '0';
+    document.getElementById('score-1').textContent = '0';
+    document.getElementById('current-0').textContent = '0';
+    document.getElementById('current-1').textContent = '0';
+    document.getElementById('name-0').textContent = 'Player 1';
+    document.getElementById('name-1').textContent = 'Player 2';
 
     document.querySelector('.player-0-panel').classList.remove('winner');
     document.querySelector('.player-1-panel').classList.remove('winner');
