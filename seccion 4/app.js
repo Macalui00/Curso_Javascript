@@ -114,12 +114,12 @@ btn();
 
 document.querySelector('.btn-roll').addEventListener('click', btn);
 */
-
+/*
     document.getElementById('score-0').textContent = '0';
     document.getElementById('score-1').textContent = '0';
     document.getElementById('current-0').textContent = '0';
     document.getElementById('current-1').textContent = '0';
-
+*/
 /* Pero tambien puedo hacer lo siguiente: */
 document.querySelector('.btn-roll').addEventListener('click', function(){
     if (gamePlaying){
@@ -178,7 +178,7 @@ document.querySelector('btn-hold').addEventListener('click',function(){
         //el tema es que cuando lo actualizamos, se nos tiene que resetear el puntaje actual y tiene que pasar al siguiente jugador
 
         //Check if player won the game
-        if (scores[activePlayer] >= 20){
+        if (scores[activePlayer] >= 100){
             document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
             document.querySelector('.dice').style.display = 'none';
             //Para que el punto rojo desaparezca y que el ganador aparezca en letra roja:
@@ -233,6 +233,7 @@ function init(){
     scores = [0,0];
     roundScore = 0;
     activePlayer = 0;
+    gamePlaying = true;
 
     document.querySelector('.dice').style.display = 'none';
 
