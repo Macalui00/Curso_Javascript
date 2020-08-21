@@ -35,9 +35,9 @@ var john = {
 };
 
 console.log(john.nombre); //primera forma de obtener un elemento del objeto
-console.log(john.['apellido']); //segunda forma de obtener un elemento del objeto
-var x = 'añoNacim';
-console.log(john.[x]); //tercera forma de obtener un elemento del objeto
+// console.log(john.['apellido']); //segunda forma de obtener un elemento del objeto
+// var x = 'añoNacim';
+// console.log(john.[x]); //tercera forma de obtener un elemento del objeto
 
 //cambiar un valor del objeto
 john.job = 'designer';

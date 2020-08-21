@@ -8,46 +8,9 @@
 
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
-
+        <!-- Estilo -->
+        <link href="../Estilos/Estilo_S3.css" rel="stylesheet" type="text/css">
     </head>
-    
-    <style>
-        body{background-color: rgb(226, 226, 231);}
-        h1, h2 {color: #adadad; font-family:"Open Sans", sans-serif;text-decoration: none; text-transform: uppercase;}
-        h1{text-align: center;}
-        
-        body{
-            background-color: rgb(61, 56, 56);
-        }
-
-        #central{
-            width: 1000px;
-            position: absolute;
-            top: 45%;
-            left: 55%;
-            transform: translate(-50%, -50%);
-            display: block;
-
-        }
-
-        a {
-            width: 47px;
-            display:block;
-            color: white;
-            text-decoration:none;
-            font-weight:400;
-            font-size:15px;
-            padding:10px;
-            font-family:"Open Sans", sans-serif;
-            text-transform:uppercase;
-            letter-spacing:1px;
-            background-color:#6e7174;
-            position: absolute;
-            top: 90%;
-            left: 50%;
-        }
-
-    </style>
 
     <body>
         <h1>Section 3: Contexto de Ejecucion y Stack</h1>
@@ -57,22 +20,22 @@
                 Ahora nos centraremos en el orden en el cual se ejecuta el código, y para eso, necesitamos hablar sobre contextos de ejecución.
                 Todo el código de Javascript debe ejecutarse en un entorno, y estos entornos se llaman CONTEXTOS DE EJECUCIÓN. Entonces, puede
                 imaginarse un contexto de ejecución como un cuadro, o como un contenedor, que almacena variables, y en el que se evalúa y
-                ejecuta una parte de nuestro código.
-
+                ejecuta una parte de nuestro código.<br>
+<br>
                 Vamos a profundizar más en esto más adelante. Ahora, el contexto de ejecución predeterminado es siempre el CONTEXTO GLOBAL.
                 RECORDAR QUE: Un contexto de ejecución es donde se ejecuta un fragmento de código.
                 Bueno, en un contexto global, se ejecuta todo el código que no está dentro de ninguna función, y esto es MUY IMPORTANTE. Entonces,
                 nuevamente, el contexto de ejecución global es para variables y funciones que no estan dentro de ninguna funcion. Ahora, tambien,
                 puede pensar en un contexto de ejecución como un objeto. El contexto de ejecución global esta asociado con el objeto global que en
-                el caso del navegador es el objeto de la ventana.
-
+                el caso del navegador es el objeto de la ventana.<br>
+<br>
                 Entonces, todo lo que declaramos en el contexto global se adjunta automaticamente al objeto ventana en el navegador. Y funciona
                 así: declarando una variable llamada lastName o window. lastName es exactamente lo mismo, es como una propiedad del objeto window.
                 Y como hablamos en las lecciones introductorias, las propiedades son solo variables asociadas a los objetos. Entonces esto tiene
-                sentido ¿verdad?
-
-                ¿Que pasa con el código que esta en funciones?
-                Cada vez que llamamos a una funcion, obtiene su propio contexto de ejecucion totalmente nuevo. Veamos esto con un ejemplo:
+                sentido ¿verdad?<br>
+<br>
+                ¿Que pasa con el código que esta en funciones?<br>
+                Cada vez que llamamos a una funcion, obtiene su propio contexto de ejecucion totalmente nuevo. Veamos esto con un ejemplo:<br>
 
             </p>
             <p>
@@ -82,24 +45,24 @@
                 mismo contexto de ejecución. Y lo mismo sobre la segunda y tercera función.
                 Y ahi es donde se pone interesante, porque allí es donde se llama a la primera funcion. Y, como se menciono, una nueva funcion
                 obtiene un nuevo contexto de ejecución. Y, lo que sucede es que este nuevo contexto se pone encima del contexto actual, formando,
-                la llamada PILA DE EJECUCIÓN.
+                la llamada PILA DE EJECUCIÓN.<br>
             </p> 
             <p>
                 Por lo tanto, durante la duración de esta primera llamada de función, el contexto de ejecución para esa función se convierte en el
-                contexto activo en el que se ejecuta el código.
+                contexto activo en el que se ejecuta el código.<br>
                 Cuando entramos a nuestra primera funcion, la variable se almacenará ahora en el contexto de ejecución para esta funcion, y ya no
                 en el contexto global. Y, ahora llamamos a la segunda funcion, ¿Y que sucederá? Una vez más, se creará un nuevo contexto de 
                 ejecución y se colocará en la parte superior de la pila de ejecución. Y ahora, ese será el contexto activo. La variable b se almacena
-                en un nuevo contexto de eejcucion y se coloca en la parte superior de la pila, como ya sabemos.
+                en un nuevo contexto de eejcucion y se coloca en la parte superior de la pila, como ya sabemos.<br>
             </p>
             <p>
                 Entonces, ahora dentro de la tercera funcion, tenemos estas dos declaraciones de variables y nada más. Entonces esta funcion ya ha
                 hecho todo su trabajo, y entonces decimos que la funcion retorna. Entonces ¿Que ocurre con el contexto de ejecución? Simplemente se
-                elimina la parte superior de la pila. Y, luego el contexto de la segunda funcion, que llamo a la tercera, vuelve a ser el contexto activo
+                elimina la parte superior de la pila. Y, luego el contexto de la segunda funcion, que llamo a la tercera, vuelve a ser el contexto activo.<br>
             </p>
             <p>
                 Y volvemos a la segunda funcion. Entonces, esta variable z se almacena en el contexto actualmente activo y, una vez que la funcion
-                retorna, el contexto tambien aparece en la pila. Entonces, de vuelta en la primera funcion ahora.
+                retorna, el contexto tambien aparece en la pila. Entonces, de vuelta en la primera funcion ahora.<br>
             </p>
             <p>Y acá lo mismo. La funcion esta lista, regresa y, por lo tanto, sale el contexto de ejecucion de la primera funcion de la pila.</p>
         </div>

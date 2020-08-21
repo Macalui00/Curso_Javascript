@@ -168,7 +168,7 @@ del principio de NO TE REPITAS A VOS MISMO.
 POR LO CUAL OTRA VEZ VAMOS A USAR UN EVENT LISTENER, Y EN ESTE CASO VA A SER PARA EL OTRO BOTON: HOLD. BUSCAMOS COMO SE LLAMA LA CLASE: "btn-hold"
 */
 
-document.querySelector('btn-hold').addEventListener('click',function(){
+document.querySelector('.btn-hold').addEventListener('click',function(){
     if (gamePlaying){
         // Add CURRENT score to GLOBAL score
         scores[activePlayer] += roundScore; //actualizamos el puntaje acumulado
@@ -202,8 +202,8 @@ function nextPlayer(){
  roundScore = 0; //se reseteea su contador a cero.
 
  //Hay que mostrar tambien que su contador se puso en cero en la interfaz de usuario.
- document.getElementById('current_0').textContent = '0';
- document.getElementById('current_1').textContent = '0';
+ document.getElementById('current-0').textContent = '0';
+ document.getElementById('current-1').textContent = '0';
 
  //Ahora lo que queremos hacer es cambiar lo que se ve en la intefaz, donde aparece el punto rojo y que el cuadro gris ahora tiene que ser el otro jugador.
  //document.querySelector('.player-0-panel').classList.remove('active'); //Seleccionamos con el Query selector la clase, y luego removemos de la lista de clases el active.

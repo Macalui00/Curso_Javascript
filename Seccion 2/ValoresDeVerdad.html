@@ -2,22 +2,77 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"&amp;gt;>
         <title>Valores de verdad y operadores de equivalencia</title>
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+        <!-- Estilo -->
+        <link href="../Estilos/estilo.css" rel="stylesheet" type="text/css">
     </head>
-
-    <style>
-        body{background-color: #E6E6FA;}
-        h1, h2 {color: grey; font-family: Arial, Helvetica, sans-serif;}
-        h1{text-decoration: underline;}
-
-        body{
-            background-color: rgb(61, 56, 56);
-        }
-    </style>
 
     <body>
         <h1>Section 2: Valores de verdad y operadores de equivalencia</h1>
-        <h2>Reccordar que para apreciar mejor el código, click derecho, inspeccionar, consola.</h1>
+        <div id = 'central'>
+            <h2>Reccordar que para apreciar mejor el código, click derecho, inspeccionar, consola.</h2>
+            <h2>Contenido del archivo ValoresDeVerdad.js</h2>
+            <code><pre id = "pre">
+//Valores de verdad y operadores de equivalencia:
+
+/* Para Javascript, un valor falso es un valor que se considera falso cuando se evalua en una condicion IF/ELSE
+Y los valores que son falsos en Javascript son indefinidos, nulos, cero, cadenas vacias y valores no numéricos
+Pueden haber más...
+Esos 5 valores se convierten en falso cuando son evaluados en una condicion de verdad o falsedad.
+Por eso los llamados Falsy (falsamente), porqeu realmente no son falsos pero si resultaran falsos cuando se evaluen en
+una condicion IF/ELSE.
+Y los Truthy values, son aquellos que son considerados verdaderos cuando se los evaluan en una condicion de enunciado IF/ELSE
+Que corresponden a todos los valores que no son Falsy.
+*/
+//Caso variable es UNDEFINED
+var height;
+
+//Caso variable esta definida:
+//height = 23;
+
+//Caso variable igual a 0.
+//height = 0;
+
+if (height) {
+    console.log("la variable esta definida");
+} else { //Variable indefinida, = a cero.
+    console.log("la variable no ha sido definida");
+}
+//Caso variable igual a 'twenty'
+//height = 'twenty';
+
+//Caso variable igual a '' (cadena vacia)
+//height = '';
+
+// Lo que podemos hacer para solucionar el problema de variable = 0 y que diga qeu esta definida es lo siguiente:
+if (height || height === 0) { //esto soluciona el problema, verificamos si la variable existe o si es igual a 0.
+    console.log("la variable esta definida");
+} else { //height = ''
+    console.log("la variable no ha sido definida");
+}
+
+//Ahora hablemos de los dos diferentes operadores de equivalencia 
+// ===: este es para comparacion de equivalencia estricta
+// ==: Operador de equidad NO ESTRICTO. Este tiene cohercion de tipos, esto quiere decir que los dos tipos de datos de las dos variables no tiene porque matchear
+
+// Equality operators
+height = 23;
+// == CON COHERSION DE TIPOS
+if (height == '23') { //Lo que esta sucediendo con esto es que el 23 de string lo convierte en un numero y entonces ahi dice que son lo mismo.
+    console.log("El operador == tiene cohersion de tipos");
+}
+// === SIN COHERSION DE TIPOS
+if (height == '23') { //Dá FALSO. NO SON LO MISMO.
+    console.log("El operador == tiene cohersion de tipos");
+}
+            </pre></code>            
+         </div>
+    <a href="../Index.html">HOME</a> 
     </body>
 
     <script src="ValoresDeVerdad.js"></script> 

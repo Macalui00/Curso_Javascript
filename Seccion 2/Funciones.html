@@ -2,22 +2,47 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"&amp;gt;>
         <title>Funciones</title>
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+        <!-- Estilo -->
+        <link href="../Estilos/estilo.css" rel="stylesheet" type="text/css">
     </head>
-
-    <style>
-        body{background-color: #E6E6FA;}
-        h1, h2 {color: grey; font-family: Arial, Helvetica, sans-serif;}
-        h1{text-decoration: underline;}
-
-        body{
-            background-color: rgb(61, 56, 56);
-        }
-    </style>
-
     <body>
         <h1>Section 2: Funciones</h1>
-        <h2>Reccordar que para apreciar mejor el código, click derecho, inspeccionar, consola.</h1>
+        <div id = 'central'>
+            <h2>Reccordar que para apreciar mejor el código, click derecho, inspeccionar, consola.</h2>
+            <h2>Contenido del archivo "Funciones.js"</h2>
+            <code><pre id = "pre">
+//Funciones
+
+function calcularEdad (añoNacimiento){
+    var añoActual = new Date().getFullYear(); //Me permite obtener el año actual.
+    return añoActual - añoNacimiento;
+}
+
+var edad = calcularEdad(1991);
+console.log("La edad de Juan es: " + edad);
+
+function añosAntesJubilacion(añoNacimiento, nombre){
+    var edad = calcularEdad(añoNacimiento);
+    var jubilacion = 65 - edad;
+    //return jubilacion; funciones no tienen porque retornar algo
+    //console.log(nombre + " se retira en " + jubilacion + " años.");
+    if (jubilacion > 0){
+        console.log(nombre + " se retira en " + jubilacion + " años.");
+    } else {
+        console.log(nombre + " ya está retirado.");
+    }
+}
+
+añosAntesJubilacion(1998, 'Mario');
+            </pre></code>            
+         </div>
+    <a href="../Index.html">HOME</a>
     </body>
 
     <script src="Funciones.js"></script> 

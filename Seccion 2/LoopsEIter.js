@@ -24,7 +24,7 @@ while (i < John.length) {
 //Y el continue para salir de la iteracion actual e ir a la siguiente
 
 for(var i = 0; i < John.length; i++){
-    if (typeof John[i] /== 'string') continue;
+    if (typeof John[i] !== 'string') continue;
     /*Línea anterior es equivalente a: 
         if (typeof John[i] /== 'string') {
             continue;}
@@ -34,7 +34,7 @@ for(var i = 0; i < John.length; i++){
 
 //Ahora supongamos que quiero imprimir y contar algo que no sea una cadena:
 for(var i = 0; i < John.length; i++){
-    if (typeof John[i] /== 'string') break;
+    if (typeof John[i] !== 'string') break;
     /*Línea anterior es equivalente a: 
         if (typeof John[i] /== 'string') {
             break;}
