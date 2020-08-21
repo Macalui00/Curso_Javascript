@@ -114,12 +114,14 @@ btn();
 
 document.querySelector('.btn-roll').addEventListener('click', btn);
 */
+
 /*
     document.getElementById('score-0').textContent = '0';
     document.getElementById('score-1').textContent = '0';
     document.getElementById('current-0').textContent = '0';
     document.getElementById('current-1').textContent = '0';
 */
+
 /* Pero tambien puedo hacer lo siguiente: */
 document.querySelector('.btn-roll').addEventListener('click', function(){
     if (gamePlaying){
@@ -168,7 +170,9 @@ del principio de NO TE REPITAS A VOS MISMO.
 POR LO CUAL OTRA VEZ VAMOS A USAR UN EVENT LISTENER, Y EN ESTE CASO VA A SER PARA EL OTRO BOTON: HOLD. BUSCAMOS COMO SE LLAMA LA CLASE: "btn-hold"
 */
 
+
 document.querySelector('.btn-hold').addEventListener('click',function(){
+
     if (gamePlaying){
         // Add CURRENT score to GLOBAL score
         scores[activePlayer] += roundScore; //actualizamos el puntaje acumulado
@@ -178,7 +182,9 @@ document.querySelector('.btn-hold').addEventListener('click',function(){
         //el tema es que cuando lo actualizamos, se nos tiene que resetear el puntaje actual y tiene que pasar al siguiente jugador
 
         //Check if player won the game
+
         if (scores[activePlayer] >= 100){
+
             document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
             document.querySelector('.dice').style.display = 'none';
             //Para que el punto rojo desaparezca y que el ganador aparezca en letra roja:
@@ -204,6 +210,7 @@ function nextPlayer(){
  //Hay que mostrar tambien que su contador se puso en cero en la interfaz de usuario.
  document.getElementById('current-0').textContent = '0';
  document.getElementById('current-1').textContent = '0';
+
 
  //Ahora lo que queremos hacer es cambiar lo que se ve en la intefaz, donde aparece el punto rojo y que el cuadro gris ahora tiene que ser el otro jugador.
  //document.querySelector('.player-0-panel').classList.remove('active'); //Seleccionamos con el Query selector la clase, y luego removemos de la lista de clases el active.
@@ -233,6 +240,7 @@ function init(){
     scores = [0,0];
     roundScore = 0;
     activePlayer = 0;
+
     gamePlaying = true;
 
     document.querySelector('.dice').style.display = 'none';
