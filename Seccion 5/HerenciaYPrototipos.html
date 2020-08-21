@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"&amp;gt;>
+
+        <title>Herencia y Cadena de Prototipos</title>
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+    </head>
+
+    <style>
+        body{background-color: #E6E6FA;}
+        h1, h2 {color: #adadad; font-family: "Open Sans", sans-serif; text-decoration: underline; text-transform: uppercase;}
+        h1{text-align: center;}
+
+        body{
+            background-color: rgb(61, 56, 56);
+        }
+
+        @media screen and (max-width: 1100px){
+            #central {
+            width: 100%;
+            }   
+
+        }
+        #central{
+            width: 1100px;
+            position: absolute;
+            top: 10%;
+            left: 25%;
+            /*transform: translate(-50%, -50%);*/
+            display: block;
+
+        }
+
+        p{
+            text-align: justify;
+            font-family: "Open Sans", sans-serif;
+            color: cornsilk;
+        }
+        
+        a {
+            width: 47px;
+            display:block;
+            color: white;
+            text-decoration:none;
+            font-weight:400;
+            font-size:15px;
+            padding:10px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform:uppercase;
+            letter-spacing:1px;
+            background-color:#6e7174;
+            position: absolute;
+            top: 110%;
+            left: 50%;
+        }
+
+    </style>
+
+    <body>
+        <h1>Section 5: Herencia y Cadena de Prototipos</h1>
+
+        <div id = 'central'>
+            <h2>Herencia y Cadena de Prototipos</h2>
+            <p>
+            En esta leccion vamos a ver de cerca a los objetos en Javascript.<br>
+            Vamos a hablar de POO y luego especificamente en JavaScript.<br>
+            <br>
+            Hay un dicho en JavaScript que dice que "Todo es un Objeto"<br>
+            Esto es casi todo correcto porque en JavaScript hay dos tipos de valores:<br>
+            - Primitivos<br>
+            - Objetos<br>
+            <br>
+            Primitivos: son todos los valores que tienen alguno de los tipos de datos qe ya hemos mencionado anteriormente:<br>
+            - Numeros<br>
+            - Strings o Cadenas<br>
+            - Booleanos<br>
+            - Indefinido o Undefined<br>
+            - Null<br>
+            <br>
+            Y, todo lo demas, son objetos:<br>
+            - Arrays o Listas<br>
+            - Funciones<br>
+            - Objetos<br>
+            - Dates o Fechas<br>
+            - Wrappers para Numbers, Strings, Booleans<br>
+            <br>
+            Es por eso que en JavaScript se dice que todo es un objeto, y de hecho, incluso cosas muy simples como lo son <br>
+            funciones, arrays o dates son todos objetos en javascript. Y esto es porque en Javascript, objetos no son solo para <br>
+            almacenar un monton de informacion sino tambien para cosas realmente complejas bajo la superficie.<br>
+            <br>
+            Entonces, estuvimos usando objetos todo el tiempo, sin saberlo.<br>
+            Esto es una de las cosas que hace a JavaScript tan unico y diferente a otros lenguajes de programación populares.<br>
+            <br>
+            POO:<br>
+            - hace un uso intensivo de objetos, propiedades y metodos y estos objetos interactuan unos con otros para hacer<br>
+            aplicaciones complejas<br>
+            - usamos objetos para almacenar datos, estructurar nuestro código y mantener nuestro código limpio.<br>
+            <br>
+            Hasta ahora, solo hemos creado objetos simples para almacenar cosas.<br>
+            Y los hemos estado escribieno uno por uno. PERO HAY UNA MEJOR MANERA, imaginemos algo como un modelo desde el cual podamos generar tantos objetos como deseemos.<br>
+            Y, podemos hacer eso en JavaScript.<br>
+            <br>
+            Acá hay un ejemplo de esto:<br>
+            Person {<br>
+                name,<br>
+                yearOfBirth,<br>
+                job,<br>
+                calculateAge()<br>
+            }<br><br>
+            Esto es un objeto especial persona que basicamente podemos usar como un modelo para crear muchos objeto persona.<br>
+            En otros lenguajes de programación esto se denomina muchas veces CLASE, pero en JavaScript, nos gusta llamarlo CONSTRUCTOR o PROTOTIPO.<br>
+            Por lo tanto, basandonos en este constructor podemos crear tantas instancias como queramos.<br>
+            <br>
+            Herencia: es cunado un objeto se basa en otro objeto. Cuando un objeto tiene acceso a las propiedades y metodos de otro objeto.<br>
+            Entonces imaginemos que ademas del constructor persona, queramos tener un constructor atleta con un par de propiedades y metodos diferentes.<br>
+            Atleta{<br>
+                olimpiadas,<br>
+                medallasOlimpiadas,<br>
+                olimpiadasPermitidas()<br>
+            }<br>
+            El atleta es tambien es una persona, por lo cual podemos usar herencia, hacemos que herede las propiedades y metodos del objeto persona.<br>
+            <br>
+            Ahora veamos en particular, como JavaScript maneja la herencia con nuestros dos ejemplos, persona y Atleta<br>
+            JavaScript es un lenguaje basado en PROTOTIPOS, que significa que la herencia funciona mediante el uso de algo llamado prototipos.<br>
+            En la práctica, significa que todos y cada uno de los objetos JavaScript tienen una propiedad Prototipo que hace posible la herencia en<br>
+            JavaScript.<br>
+            <br>
+            Veamos mejor como funciona realmente la herencia...<br>
+            Entonces, Persona es nuestro constructor y John es nuestra instancia, si queremos que john herede un metodo o una propiedad del objeto Persona,<br>
+            tenemos que agregar ese metodo o propiedad a la propiedad prototipo persona, tal y como esta hecho en la imagen donde tengo un cuadradro persona<br>
+            del cual deriva un prototipo en linea punteada, el cual incluye el metodo calcularEdad(). Por esto mismo, john hereda el metodo y puede llamarlo.<br>
+            Y cualquier otro objeto creado por el constructor Persona, heredara tambien este metodo.<br>
+            Lo que es importante resaltar acá es que el prototipo de Persona no es el prototipo de la Persona en si mismo, sino de todas las instancias que<br>
+            cree a traves del plano Persona, como en este caso, John. Entonces, en otras palabras, la propiedad prototipo de la persona es el prototipo de<br>
+            john. Y eso no es todo, porque el objeto Persona en sí es la instancia de un constructor aun mas grande que es el objeto Object:<br>
+            <br>
+            Object tiene una propiedad prototipo que contiene:<br>
+            hasOwnProperty(),<br>
+            isPrototypeOf(),<br>
+            ...,<br>
+            valueOf()<br>
+            <br>
+            Suena un poco loco pero es asi como funciona. Todos y cada uno de los objetos que creamos es una instancia del constructor de Objetos que tiene<br>
+            un monton de métodos en su propiedad de prototipo. Y, como puede adivinar, el objeto Persona hereda estos metodos y puede llamarlos. Además, el<br>
+            Objeto John hereda estos métodos y puede llamarlos. Y con esto, hemos explicado la cadena de prototipos.<br>
+            <br>
+            Entonces, la cadena de prototipos es lo que hace posible toda esta herencia. Y aquí esta como funciona: cuando uno intenta acceder a un determinado<br>
+            metodo o propiedad de un objeto, JavaScript primero intentara buscar el metodo en el mismo objeto mismo, si no lo encuentra ahi, entonces buscara <br>
+            en el prototipo del objeto, que es la propiedad prototipo de su elemento primario. Por lo tanto, se mueve hacia arriba en la cadena de prototipos.<br>
+            Si el prototipo no esta ahí tampoco, esto continua hasta que no haya más prototipos para mirar, que es nulo. Nulo es el unico que no tiene prototipo<br>
+            y, por lo tanto, es el último eslabón de la cadena de prototipos. Y en este caso, se devuelve indefinido.<br>
+            <br>
+            Esta es la razon por la cual, por ejemplo, el objeto John podría llamar al método hasOwnProperty que está almacenado en la propiedad Object Prototype.<br>
+            Y como esto es tan importante, aquí va un resumen:<br>
+            <br>
+            - Cada objeto JavaScript tiene una propiedad prototipo, que hace posible la herencia en Javascript.<br>
+            - La propiedad prototipo de un objeto es donde nosotros ponemos metodos y propiedades que queremos que otros objetos hereden.<br>
+            - La propiedad Prototipo del Constructor no es el Prototipo del Constructor en sí, sino que es le prototipo de todas las instancias que se crean a<br>
+            través de él.<br>
+            - Cuando se llama a un determinado método, o propiedad, la busqueda comienza en el objeto mismo, y sino se puede encontrar ahí, la busqueda avanza <br>
+            hacia el prototipo del objeto. Esto continúa hasta que el metodo es encontrado, y esta es la cadena de prototipos.<br>
+            </p>
+            <a href="Index.html">HOME</a>        
+        </div>
+        
+    </body>
+   
+</html>

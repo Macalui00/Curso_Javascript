@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"&amp;gt;>
+        <title>Operadores básicos</title>
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+        <!-- Estilo -->
+        <link href="../Estilos/estilo.css" rel="stylesheet" type="text/css">
+    </head>
+
+
+    <body>
+        <h1>Section 2: Operadores básicos</h1>
+        <div id = 'central'>
+            <h2>Reccordar que para apreciar mejor el código, click derecho, inspeccionar, consola.</h2>
+            <h2>Contenido del archivo "OperBasicos.js"</h2>
+            <code><pre id = "pre">
+/******************************************************************************
+* Operadores básicos: son como funciones escritas de una manera especial en javascript 
+*/
+var year, yearJohn,yearMark,ageJohn,ageMark;
+year = 2020
+ageJohn = 28;
+ageMark = 33;
+
+//Operadores Matematicos.
+yearJohn = year - ageJohn;
+yearMark = year - ageMark;
+
+console.log(yearJohn);
+
+console.log(year + 2); //2022
+console.log(year * 2); //4040
+console.log(year / 10);
+
+//Operadores Lógicos.
+/*
+var johnOlder = ageJohn > ageMark;
+console.log(johnOlder); //FALSE
+*/
+
+var johnOlder = ageJohn < ageMark;
+console.log(johnOlder); // TRUE
+
+//operador Typeof, los anteriores siempre requirieron dos cosas para comparar o agregar, etc.
+console.log(typeof johnOlder); //como su nombre lo indica, nos retorna el tipo de dato que presenta una variable.
+console.log(typeof ageJohn);
+console.log(typeof 'Mark es mas viejo que John');
+var x; //UNDEFINED
+//Console.log(typeof x);
+            </pre></code>            
+         </div>
+    <a href="../Index.html">HOME</a>   
+    </body>
+
+    <script src="OperBasicos.js"></script> 
+
+</html>

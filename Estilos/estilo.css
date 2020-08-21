@@ -1,0 +1,58 @@
+/*Color de fondo*/
+body{
+    background-color: rgb(61, 56, 56);
+}
+
+/*Estilos de los headers*/
+h1, h2 {color: #adadad; font-family:"Open Sans", sans-serif;text-decoration: none; text-transform: uppercase;}
+h1{padding-left:25%}
+
+/*Para el div central*/
+#central{
+    padding-left: 25%;
+}
+
+/*Para el codigo del archivo .js*/
+/* code {
+   padding: 2px 2px;
+    font-size: 90%;       
+    border-radius: 4px;
+    align-content: center;
+} */
+
+pre {
+    overflow: auto;
+    max-width: 75%;
+}
+
+pre {
+    display: block;
+    padding: 20px;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    line-height: 1;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: rgb(228, 227, 227);
+    background-color: #6e7174;
+   /* border: 1px solid #ccc;
+    border-radius: 4px;*/
+}
+
+/*Para el boton de HOME*/
+a { 
+    margin-left: 50%;
+    margin-top: 20px;
+    padding:10px;
+    width: 47px;
+    display: block;
+    background-color:#6e7174;
+    color: white;
+    text-decoration:none;
+    font-weight:400;
+    font-size:15px;
+    font-family: "Open Sans", sans-serif;
+    text-transform:uppercase;
+    letter-spacing:1px;
+
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"&amp;gt;>
+        <title>Mutacion de variables y coercion de tipo</title>
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+        <!-- Estilo -->
+        <link href="../Estilos/estilo.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <h1>Section 2: Mutacion de variables y coercion de tipo</h1>
+
+        <div id = 'central'>
+            <h2>Contenido del archivo "MultYCoerc.js"</h2>
+            <code><pre id = "pre">
+/******************************************************************************
+* Mutacion de variables y coercion de tipo. 
+*/
+
+//Vamos a ver que pasa cuando mostramos por consola dos variables:
+console.log(firstName + ' ' + age); // funciono todo como si fueran Strings y esto se debe a algo llamado coercion de tipos
+//Javascript convierte variables de un tipo de dato a otro automaticamente.
+
+var job, isMaried; //declaro varias variables juntas
+job = 'teacher'; // y le asigno valores en diferentes lineas.
+isMaried = false;
+
+console.log(firstName + ' is a ' + age + ' year old ' + job + '. Is he married? ' + isMaried);
+
+//Mutacion de variables:
+age = 'twienty eight'; //javascript convierte automaticamente la variable age de un tipo de dato numerico a un string.
+job = 'driver';
+
+alert(firstName + ' is a ' + age + ' year old ' + job + '. Is he married? ' + isMaried);
+//Alert pequeña ventana emergente cuando uno ejecuta el codigo en el browser.
+
+//Obtener informacion a traves del usuario:
+var lastName = prompt('what is his last name?'); //prompt me permite solicitar por pantalla una variable, esta funcion retorna una variable.
+console.log(firstName + ' ' + lastName);          
+            </pre></code>            
+        </div>
+<a href="../Index.html">HOME</a>
+    </body>
+
+
+    <script src="MutYCoer.js"></script> 
+
+</html>

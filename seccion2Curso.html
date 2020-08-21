@@ -10,156 +10,10 @@
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
 
-        
+
+        <!--Estilo de las secciones-->
+        <link href="Estilos\estilosSecciones.css" rel="stylesheet" type="text/css">
     </head>
-
-    <style>
-
-        body {
-            background-color:  rgb(61, 56, 56);
-            /*background-image: url('bush.png');*/
-        }
-
-        h1{ text-align: center;
-        text-decoration: none;
-        font-family: "Open Sans", sans-serif;
-        color:  rgb(133, 131, 131);
-        }
-
-        h2{
-        text-decoration: underline;
-        font-family: "Open Sans", sans-serif;
-        color:  rgb(218, 218, 218);
-        }
-        #parte1{
-            position: relative;
-            z-index: 999;
-        }
-
-        #menu {
-            text-align: center;
-        }
-
-        /* Menu */
-        #menu ul {
-        display:inline-block; /*Esto me permite junto al text-align: center, que el menu me quede centrado*/
-        list-style:none;
-        margin:0 auto;
-        padding:0;
-        }
-
-        /* items del menu */
-
-        #menu ul li {
-        background-color:#6e7174;
-       }
-
-        /* enlaces del menu */
-
-        #menu ul a {
-        display:block;
-        color: white;
-        text-decoration:none;
-        font-weight:400;
-        font-size:15px;
-        padding:10px;
-        font-family: "Open Sans", sans-serif;
-        text-transform:uppercase;
-        letter-spacing:1px;
-        }
-
-        /* items del menu */
-
-        #menu ul li {
-        position:relative;
-        float:left;
-        margin:0 auto;
-        padding:0;
-        }
-
-        /* efecto al pasar el ratón por los items del menu */
-
-        #menu ul li:hover {
-        background:#343a42;
-        }
-        /* menu desplegable */
-
-        #menu ul ul {
-        display:none;
-        position:absolute;
-        top:100%;
-        left:0;
-        background: grey;
-        padding:0;
-        }
-
-        /* items del menu desplegable */
-
-        #menu ul ul li {
-        float:none;
-        width:200px
-        }
-
-        /* enlaces de los items del menu desplegable */
-
-        #menu ul ul a {
-
-        line-height:90%;
-        padding:10px 15px;
-        }
-
-        /* items del menu desplegable al pasar el ratón */
-
-        #menu ul li:hover > ul {
-        display:block;
-        }
-
-        p{
-            color:  rgb(218, 218, 218);
-            font-size: 20px;
-            font-family: "Open Sans", sans-serif;
-        }
-        @media screen and (max-width: 800px){
-            #central {
-            width: 100%;
-            }   
-            #marco1,#marco2 {
-            padding:8px;
-
-            width: 600px;
-
-            }
-        }
-
-        #central {
-            width: 800px;
-            position: absolute;
-            top: 10%;
-            left: 23%;
-            /*transform: translate(-50%, -50%);*/
-            background-color: rgba(89, 89, 90, 0.575);
-            box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-            padding: 10px;
-
-        }
-      
-        #imagenes{
-            position: relative;
-            left: 11%;
-            z-index: 3;
-        }
-
-        #marco1,#marco2 {
-        padding:8px;
-        background-color: #4b4b4b;
-        width: 600px;
-        border: 1px solid #f1f1f1;
-        }
-        #marco1 IMG, #marco2 IMG{
-        border: 1px solid #f1f1f1;
-        }
-    </style>
 
     <body>
         <h1>Section 2: JavaScript Language Basics</h1>
@@ -172,30 +26,31 @@
                 <li><a href="#imagenes" title="imagenes">Como ver consola</a></li>
                 <li><a href="#" title="Lecciones">Lecciones</a>
                     <ul>
-                        <li><a href="hola_mundo.html" title="HolaMundo">HolaMundo</a></li>
-                        <li><a href="VarsYTDD.html" title="VarsYTDD">VarsYTDD</a></li>
-                        <li><a href="MutYCoerc.html" title="MutYCoerc">MutacYCoerc</a></li>
-                        <li><a href="OperBasicos.html" title="OperBasicos">Operadores Básicos</a></li>
-                        <li><a href="OperPrec.html" title="OperPrec">Operador de Precedencia</a></li>
-                        <li><a href="Script.html" title="IfElse">IF/ELSE</a></li>
-                        <li><a href="OperTern_y_Switch.html" title="TernYSwit">Operador Ternario y Switch Statements</a></li>
-                        <li><a href="ValoresDeVerdad.html" title="ValVerdad">Valores de verdad y == VS. === </a></li>
-                        <li><a href="Funciones.html" title="Funciones">Funciones</a></li>
-                        <li><a href="DeclYExpFunc.html" title="DeclYExp">Expresiones y declaraciones de funciones</a></li>
-                        <li><a href="Listas.html" title="Listas">Listas</a></li>
-                        <li><a href="Objetos.html" title="Objetos">Objetos</a></li>
-                        <li><a href="LoopsEIter.html" title="LoopsEIter">Loops e Iteraciones</a></li>
+                        <li><a href="Seccion 2/hola_mundo.html" title="HolaMundo">HolaMundo</a></li>
+                        <li><a href="Seccion 2/VarsYTDD.html" title="VarsYTDD">VarsYTDD</a></li>
+                        <li><a href="Seccion 2/MutYCoerc.html" title="MutYCoerc">MutacYCoerc</a></li>
+                        <li><a href="Seccion 2/OperBasicos.html" title="OperBasicos">Operadores Básicos</a></li>
+                        <li><a href="Seccion 2/OperPrec.html" title="OperPrec">Operador de Precedencia</a></li>
+                        <li><a href="Seccion 2/Script.html" title="IfElse">IF/ELSE</a></li>
+                        <li><a href="Seccion 2/BooleanLogic.html" title="BoolLog">Logica Booleana</a></li>
+                        <li><a href="Seccion 2/OperTern_y_Switch.html" title="TernYSwit">Operador Ternario y Switch Statements</a></li>
+                        <li><a href="Seccion 2/ValoresDeVerdad.html" title="ValVerdad">Valores de verdad y == VS. === </a></li>
+                        <li><a href="Seccion 2/Funciones.html" title="Funciones">Funciones</a></li>
+                        <li><a href="Seccion 2/DeclYExpFunc.html" title="DeclYExp">Expresiones y declaraciones de funciones</a></li>
+                        <li><a href="Seccion 2/Listas.html" title="Listas">Listas</a></li>
+                        <li><a href="Seccion 2/Objetos.html" title="Objetos">Objetos</a></li>
+                        <li><a href="Seccion 2/LoopsEIter.html" title="LoopsEIter">Loops e Iteraciones</a></li>
                     </ul>
         
                 </li>
         
                 <li><a href="#" title="Lecciones">Desafíos</a>
                 <ul>
-                    <li><a href="Desafio1.html" title="Desafio1">Desafio de codeo 1</a></li>
-                    <li><a href="Desafio2.html" title="Desafio2">Desafio de codeo 2</a></li>
-                    <li><a href="Desafio3.html" title="Desafio3">Desafio de codeo 3</a></li>
-                    <li><a href="Desafio4.html" title="Desafio4">Desafio de codeo 4</a></li>
-                    <li><a href="Desafio5.html" title="Desafio5">Desafio de codeo 5</a></li>
+                    <li><a href="Seccion 2/Desafio1.html" title="Desafio1">Desafio de codeo 1</a></li>
+                    <li><a href="Seccion 2/Desafio2.html" title="Desafio2">Desafio de codeo 2</a></li>
+                    <li><a href="Seccion 2/Desafio3.html" title="Desafio3">Desafio de codeo 3</a></li>
+                    <li><a href="Seccion 2/Desafio4.html" title="Desafio4">Desafio de codeo 4</a></li>
+                    <li><a href="Seccion 2/Desafio5.html" title="Desafio5">Desafio de codeo 5</a></li>
                     </ul>
                 </li>      
             </ul>
@@ -206,6 +61,7 @@
             <h2>Breve Resumen</h2>
             
             <p> Esta seccion consistió en aprender las bases de Javascript. <br>
+                Basicamente, una breve introduccion a Javascript, variables, tipo de variables, funciones, etc.
                 Mi recomendación, para apreciar mejor lo que fui haciendo es click derecho a la pantalla,
                 inspeccionar, para poder ver la consola.<br>
                 Saludos!

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"&amp;gt;>
+        <title>Desafio 4</title>
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+        <!-- Estilo -->
+        <link href="../Estilos/estilo.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h1>Section 2: Desafio 4</h1>
+        <h1>Section 2: Declaraciones y expresion de funciones</h1>
+        <div id = 'central'>
+            <h2>Reccordar que para apreciar mejor el código, click derecho, inspeccionar, consola.</h2>
+            <h2>Contenido del archivo "Desafio4.js"</h2>
+            <code><pre id = "pre">
+/* Desafio 4
+
+Vamos a recordar el primer desafio de codeo cuando mark y john comparaban sus indices de masa corporal.
+Ahora vamos a implementar la misma funcionalidad con objetos y metodos. 
+1. Por cada uno de ellos, crear un objeto con propiedades para sus nombres completos, masa y altura.
+2. Despues, agregar un metodo para cada objeto para calcular el indice de masa corporal. Salvar el indice
+en el objeto y tambien retornarlo desde el metodo.
+3. Al final, mostrarlo por consola quien tiene el indice mas alto, junto con sus nombres y sus respectivos
+indices de masa corporal. NO OLVIDAR que pueden tener el mismo indice de masa corporal.
+
+RECORDAR: BMI = masa / altura^2 = masa / (altura * altura). 
+Masa en KG y Altura en Metros.
+
+*/
+function compararBMI(BMI1, nombre1, BMI2, nombre2){
+    if (BMI1 > BMI2) {
+        console.log(nombre1 + "presenta un indice de masa corporal mayor, que es de: " + BMI1);
+    } else if (BMI1 === BMI2) {
+        console.log(nombre1 + " y " + nombre2 + "presentan un mismo indice de masa corporal, que es de: " + BMI1);
+    } else {
+        console.log(nombre2 + "presenta un indice de masa corporal mayor, que es de: " + BMI2);
+    }
+}
+
+var pers1 = {
+    nombre: '', 
+    apellido: '',
+    peso = 0,
+    altura = 0,
+    calcBMI: function(){
+        this.BMI = this.peso / (this.altura*this.altura) ; 
+    }
+};
+pers1.nombre = prompt('¿Cual es el nombre de la primera persona?');
+pers1.apellido = prompt('¿Cual es el apellido de ' + pers1.nombre + '?');
+pers1.peso = parseFloat(prompt('¿Cual es su peso en Kg?'));
+pers1.altura = parseFloat(prompt('¿Cual es su altura en metros?'));
+
+var pers2 = {
+    nombre: '', 
+    apellido: '',
+    peso = 0,
+    altura = 0,
+    calcBMI: function(){
+        this.BMI = this.peso / (this.altura*this.altura) ; 
+    }
+};
+pers2.nombre = prompt('¿Cual es el nombre de la primera persona?');
+pers2.apellido = prompt('¿Cual es el apellido de ' + pers2.nombre + '?');
+pers2.peso = parseFloat(prompt('¿Cual es su peso en Kg?'));
+pers2.altura = parseFloat(prompt('¿Cual es su altura en metros?'));
+
+pers1.calcBMI();
+pers2.calcBMI();
+
+console.log(pers1.BMI, pers2.BMI);
+compararBMI(pers1.BMI, pers1.nombre, pers2.BMI, pers2.nombre);
+                
+            </pre></code>            
+         </div>
+    <a href="../Index.html">HOME</a>   
+    </body>
+
+    <script src="Desafio4.js"></script> 
+
+</html>

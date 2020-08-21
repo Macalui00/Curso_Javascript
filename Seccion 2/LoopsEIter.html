@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"&amp;gt;>
+        <title>Loops e iteraciones</title>
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+        <!-- Estilo -->
+        <link href="../Estilos/estilo.css" rel="stylesheet" type="text/css">
+    </head>
+   
+    <body>
+        <h1>Section 2: Loops e iteraciones</h1>
+        <div id = 'central'>
+            <h2>Reccordar que para apreciar mejor el código, click derecho, inspeccionar, consola.</h2>
+            <h2>Contenido del archivo LoopsEIter.js</h2>
+            <code><pre id = "pre">
+/* Loops e iteraciones
+*/
+
+//For loop
+for(var i = 0; i <10; i++){
+    console.log(i);
+}
+
+var John = ['John','Smith', 1990, 'teacher', false];
+
+for(var i = 0; i < John.length; i++){
+    console.log(John[i]);
+}
+
+//While loop
+var i = 0;
+while (i < John.length) {
+    console.log(John[i]);
+    i++;
+}
+
+//Continue y break
+//Usamos el break para salir del loop
+//Y el continue para salir de la iteracion actual e ir a la siguiente
+
+for(var i = 0; i < John.length; i++){
+    if (typeof John[i] !== 'string') continue;
+    /*Línea anterior es equivalente a: 
+        if (typeof John[i] !== 'string') {
+            continue;}
+    */
+    console.log(John[i]);
+}
+
+//Ahora supongamos que quiero imprimir y contar algo que no sea una cadena:
+for(var i = 0; i < John.length; i++){
+    if (typeof John[i] !== 'string') break;
+    /*Línea anterior es equivalente a: 
+        if (typeof John[i] !== 'string') {
+            break;}
+    */
+    console.log(John[i]);
+}
+
+/*Imaginemos ahora que yo quiero recorrer el mismo array pero de manera inversa*/
+for (var i = John.length -1; i >= 0; i--){
+    console.log(John[i]);
+}
+            </pre></code>            
+         </div>
+    <a href="../Index.html">HOME</a>   
+    </body>
+
+    <script src="LoopsEIter.js"></script> 
+
+</html>

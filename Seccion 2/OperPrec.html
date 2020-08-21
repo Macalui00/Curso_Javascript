@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"&amp;gt;>
+        <title>Operador de Precedencia</title>
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+        <!-- Estilo -->
+        <link href="../Estilos/estilo.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <h1>Section 2: Operador de Precedencia</h1>
+        <div id = 'central'>
+            <h2>Reccordar que para apreciar mejor el código, click derecho, inspeccionar, consola.</h2>
+            <h2>Contenido del archivo "OperPrec.js"</h2>
+            <code><pre id = "pre">
+/******************************************************************************
+* Operador de precedencia
+*/
+
+var now = 2018;
+var yearJohn = 1989;
+var fullAge = 18;
+
+//Multiples operadores
+var isFullAge = now - yearJohn >= fullAge;//True
+
+//¿Como sabe javascript que operador se ejecuta primero?
+console.log(isFullAge); 
+
+/*Para esto tenemos que pensar en la precedencia del operador, osea que operador se ejecuta primero.
+
+    codingheroes.io/resources/ en la seccion de javascript, vamos a encontrar una tabla de precedencia de operadores.
+    Los operadores que estan arriba en la lista, se ejecutaran antes qeu el resto que este abajo.
+
+*/
+
+/* en realidad tenemos tres operadores:
+    - Operador de Asignacion
+    - Operador Menos (-)
+    - Operador Mayor o igual (>=)
+    Y el orden en el que se ejecutan es:
+    - Primero el (-)
+    - Luego el >=
+    - Y, por ultimo, asignación
+*/
+
+//Agrupacion ()
+var ageJohn = now - yearJohn;
+var ageMark = 35;
+//var average = ageJohn + ageMark / 2;
+//Y esto no esta del todo correcto, porque primero dividira la edad de mark y luego eso lo sumara a la edad de mark.
+//Para calcular el promedio, debemos agregarle los parentesis.
+
+var average = (ageJohn + ageMark) / 2;
+console.log(average);
+
+//Asignaciones multiples
+var x, y;
+x = (3 + 5) * 4 - 6; // 8 * 4 - 6 // 32 - 6 // 26
+console.log(x);
+
+x = y = (3 + 5) * 4 - 6;
+console.log(x, y); //para mostrar por consola mas de una variable.
+/* ¿Como realmente funcionan estas asignaciones multiples?
+
+Esto tiene que ver que ademas de la precedencia de opeadores, tambien tenemos la asociatividad que es la direccion en la que se ejecuta la operacion.
+Por ejemplo, en el caso de multiplicacion y suma tenemos como asociatividad: de izquierda a derecha.
+Pero, hay operadores que trabajan al reves, como es el caso del operador de asignación.
+Es por eso que esa asignacion funciona.
+
+*/
+
+//Mas operadores
+
+//x = x * 2; repetimos la variable, esto lo podemos hacer mas simple:
+x *= 2;
+console.log(x);
+//Lo mismo sucede con +, -, /
+x += 10;
+console.log(x);
+//Estos se encuentran en la tabla, en la parte de operadores de asignacion, ya que, son operadores de asignacion.
+
+//Increment en vez de x = x + 1 o x += 1 hay una version mucho mas simple:
+x++;
+console.log(x);
+//lo mismo funciona con -- (decrement)
+x--;
+console.log(x);
+            </pre></code>            
+         </div>
+    <a href="../Index.html">HOME</a> 
+    </body>
+
+    <script src="OperPrec.js"></script> 
+
+</html>

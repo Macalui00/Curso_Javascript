@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"&amp;gt;>
+        <title>Objetos y propiedades</title>
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+        <!-- Estilo -->
+        <link href="../Estilos/estilo.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <h1>Section 2: Objetos y propiedades</h1>
+        <div id = 'central'>
+            <h2>Reccordar que para apreciar mejor el código, click derecho, inspeccionar, consola.</h2>
+            <h2>Contenido del archivo Objetos.js</h2>
+            <code><pre id = "pre">
+/* Objetos y propiedades
+
+Imaginemos que queremos acceder a un elmento de la lista pero no por su índice sino por un nombre específico.
+Basicamente nombrando cada uno de los valores.
+Con las listas no puedes hacer esto pero con los objetos si se puede hacer esto.
+
+Entonces en objetos podemos definir pares de valores clave, lo que significa que cada valor tiene un nombre que se llama la clave
+Entonces podemos usar objetos para agrupar diferentes variables que permanecen juntas y que no tienen un orden en particular.
+Por ejemplo, las propiedades de John.
+
+Por ende, una diferencia fundamental entre objetos y arrays es que en los arrays el orden importa mucho, mientras que en los objetos no importan en absoluto.
+*/
+
+//La forma mas facil de crear objetos es con el llamado literal que basicamente es como un contenedor que podemos llenar con variables que se llaman propiedades.
+//Entonces el objeto literal lo escribimos asi: 
+var john = {
+    //clave: valor;
+    nombre: 'John', //nombre es una propiedad del objeto john.
+    apellido: 'Smith',
+    añoNacim: 1998,
+    family: ['Jane', 'Mark', 'Bob', 'Emily'],
+    job: 'teacher',
+    isMarried: false,
+   /* calcEdad: function(añoNacim){
+        return 2020 - añoNacim;
+    }*/
+    /*calcEdad: function(){
+        var añoAct = (new Date).getFullYear();
+        return añoAct - this.añoNacim; //this significa el objeto actual. 
+    }*/
+    calcEdad: function(){
+        var añoAct = (new Date).getFullYear();
+        this.año = añoAct - this.añoNacim; //this significa el objeto actual. 
+    }
+};
+
+console.log(john.nombre); //primera forma de obtener un elemento del objeto
+console.log(john.['apellido']); //segunda forma de obtener un elemento del objeto
+var x = 'añoNacim';
+console.log(john.[x]); //tercera forma de obtener un elemento del objeto
+
+//cambiar un valor del objeto
+john.job = 'designer';
+//tambien para esto podemos usar la notacion de brackets
+john['isMarried'] = true;
+console.log(john);
+
+//Hay dos maneras diferentes de inicializar un nuevo objeto:
+var jane = new Object();
+jane.nombre = 'Jane';
+jane.añoNacim = 1969;
+jane['apellido'] = 'smith'; //Importante lo que va entre [] tiene que ir entre comillas.
+console.log(jane);
+
+//Podemos incluso adjuntar funciones a los objetos, llamadas metodos.
+//para lo cual tomemos el objeto john y agreguemosle una funcion para calcular la edad de john,
+//no queremos almacenar el resultado dentro del objeto porqeu cambia cada año
+//console.log(john.calcEdad(1990)); En vez de estar pasando por parametro el año, podemos estar utilizando el valor que ya tenemos dentro del objeto.
+
+//Ahora podemos decir que los arrays son objetos porque esa es la unica forma de tener metodos 
+
+//Falta algo más ¿Que pasa si ademas quiero almacenar el resultado en el objeto john?
+//var age = john.calcEdad();
+//Pero incluso lo podemos hacer mejor. Entonces si se puede acceder a una propiedad del objeto actual, esto significa que tambien podemos configurarlo.
+
+john.calcEdad();
+console.log(john);
+
+            </pre></code>            
+         </div>
+    <a href="../Index.html">HOME</a>   
+    </body>
+
+    <script src="Objetos.js"></script> 
+
+</html>

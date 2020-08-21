@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"&amp;gt;>
+        <title>IF / Else en Javascript</title>
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+        <!-- Estilo -->
+        <link href="../Estilos/estilo.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <h1>Section 2: IF / Else en Javascript</h1>
+        <div id = 'central'>
+            <h2>Reccordar que para apreciar mejor el código, click derecho, inspeccionar, consola.</h2>
+            <h2>Contenido del archivo Script.js</h2>
+            <code><pre id = "pre">
+/******************************************************************************
+* IF / else statements
+*/
+
+var firstName = 'John';
+var estadoCivil = 'soltero';
+
+// se usan 3 = para equivalencias.
+if (estadoCivil === 'casado') {
+    console.log(firstName + ' esta casado!');
+} else {
+    console.log(firstName + ' esperemos que se case pronto :)')
+}
+
+var estaCasado = true; 
+if (estaCasado) {
+    //Como ya sabemos que estaCasado es un booleano y tiene asignado un valor, el condicional para preguntar si es verdadero no es necesarios en este caso.
+    console.log(firstName + ' esta casado!');
+} else {
+    console.log(firstName + ' esperemos que se case pronto :)')
+}
+
+/*Ahora escribamos una mejor version del codigo del coding challenge*/
+
+var pesoJohn = prompt('Cual es el peso de John en Kg?');
+var alturaJohn = prompt('Cual es la altura de John en metros?');
+
+var pesoMark = prompt('Cual es el peso de Mark en Kg?');
+var alturaMark = prompt('Cual es la altura de Mark en metros?');
+
+var BMIJohn = pesoJohn / (alturaJohn * alturaJohn);
+var BMIMark = pesoMark / (alturaMark * alturaMark);
+
+console.log('El BMI de John es: ' + BMIJohn + ' y el BMI de Mark es: ' + BMIMark);
+
+var esBMIMarkMayor = BMIMark > BMIJohn;
+
+if (esBMIMarkMayor) {
+    console.log('Es el BMI de Mark mayor al de John');
+} else {
+    console.log('Es el BMI de John mayor al de Mark');
+}
+                                
+            </pre></code>            
+         </div>
+    <a href="../Index.html">HOME</a>   
+    </body>
+
+    <script src="Script.js"></script> 
+
+</html>
