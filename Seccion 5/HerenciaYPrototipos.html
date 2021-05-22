@@ -28,13 +28,19 @@
 
         }
         #central{
-            width: 1100px;
-            position: absolute;
+           width: 1000px;
+            /* position: absolute;
             top: 10%;
-            left: 25%;
-            /*transform: translate(-50%, -50%);*/
-            display: block;
-
+            left: 25%;*/
+            position: block;
+            margin-left: auto;
+            margin-right: auto;
+            /*transform: translate(-50%, -50%);
+            display: block;*/
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 28px;
+            background-color: rgba(89, 89, 90, 0.575);
         }
 
         p{
@@ -45,7 +51,7 @@
         
         a {
             width: 47px;
-            display:block;
+           /* display:block;*/
             color: white;
             text-decoration:none;
             font-weight:400;
@@ -55,16 +61,19 @@
             text-transform:uppercase;
             letter-spacing:1px;
             background-color:#6e7174;
-            position: absolute;
-            top: 110%;
-            left: 50%;
+            margin-top: 3px;
+            position: block;
+            margin-left: 45%;
+            margin-right: auto;
+           /* top: 110%;
+            left: 50%;*/
         }
 
     </style>
 
     <body>
         <h1>Section 5: Herencia y Cadena de Prototipos</h1>
-
+        <!--<div id="direccion"><a href="../index.html">HOME</a></div>-->
         <div id = 'central'>
             <h2>Herencia y Cadena de Prototipos</h2>
             <p>
@@ -166,9 +175,9 @@
             - Cuando se llama a un determinado método, o propiedad, la busqueda comienza en el objeto mismo, y sino se puede encontrar ahí, la busqueda avanza <br>
             hacia el prototipo del objeto. Esto continúa hasta que el metodo es encontrado, y esta es la cadena de prototipos.<br>
             </p>
-            <a href="https://macalui00.github.io/Curso_Javascript/">HOME</a>     
+            <a href="../index.html">HOME</a>
         </div>
         
     </body>
-   
+
 </html>

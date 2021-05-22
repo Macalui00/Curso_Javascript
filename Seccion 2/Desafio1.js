@@ -28,3 +28,4 @@ console.log(BMIJohn, BMIMark);
 var esBMIMarkMayor = BMIMark > BMIJohn;
 
 console.log('Es el BMI de Mark mayor al de John? ' + esBMIMarkMayor);
+alert('Es el BMI de Mark mayor al de John? ' + esBMIMarkMayor);
